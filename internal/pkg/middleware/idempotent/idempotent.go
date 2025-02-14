@@ -14,14 +14,11 @@ import (
 	"github.com/go-kratos/kratos/v2/transport"
 
 	"github.com/rosas/onex/internal/pkg/idempotent"
-	v1 "github.com/rosas/onex/pkg/api/gateway/v1"
 	"github.com/rosas/onex/pkg/api/zerrors"
 )
 
 func idempotentBlacklist() selector.MatchFunc {
 	blacklist := make(map[string]struct{})
-	blacklist[v1.OperationGatewayCreateMiner] = struct{}{}
-	blacklist[v1.OperationGatewayCreateMinerSet] = struct{}{}
 	return func(ctx context.Context, operation string) bool {
 		if _, ok := blacklist[operation]; ok {
 			return true
