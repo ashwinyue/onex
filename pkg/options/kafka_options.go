@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/onexstack/onex.
 //
 
 package options
@@ -19,7 +19,7 @@ import (
 	"github.com/spf13/pflag"
 	"k8s.io/klog/v2"
 
-	stringsutil "github.com/rosas/onex/pkg/util/strings"
+	stringsutil "github.com/ashwinyue/onex/pkg/util/strings"
 )
 
 var _ IOptions = (*KafkaOptions)(nil)

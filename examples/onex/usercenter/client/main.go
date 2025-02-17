@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package main
@@ -17,7 +17,7 @@ import (
 	transhttp "github.com/go-kratos/kratos/v2/transport/http"
 	"github.com/spf13/pflag"
 
-	v1 "github.com/rosas/onex/pkg/api/gateway/v1"
+	v1 "github.com/ashwinyue/onex/pkg/api/gateway/v1"
 )
 
 var token = pflag.StringP("token", "t", "", "Access token used to access onex-gateway.")

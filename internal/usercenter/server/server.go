@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package server
@@ -24,16 +24,16 @@ import (
 	"github.com/google/wire"
 	"golang.org/x/text/language"
 
-	onexmetrics "github.com/rosas/onex/internal/pkg/metrics"
-	"github.com/rosas/onex/internal/pkg/middleware/authn/jwt"
-	i18nmw "github.com/rosas/onex/internal/pkg/middleware/i18n"
-	"github.com/rosas/onex/internal/pkg/middleware/logging"
-	"github.com/rosas/onex/internal/pkg/middleware/tracing"
-	"github.com/rosas/onex/internal/pkg/middleware/validate"
-	"github.com/rosas/onex/internal/usercenter/locales"
-	"github.com/rosas/onex/pkg/authn"
-	"github.com/rosas/onex/pkg/i18n"
-	"github.com/rosas/onex/pkg/log"
+	onexmetrics "github.com/ashwinyue/onex/internal/pkg/metrics"
+	"github.com/ashwinyue/onex/internal/pkg/middleware/authn/jwt"
+	i18nmw "github.com/ashwinyue/onex/internal/pkg/middleware/i18n"
+	"github.com/ashwinyue/onex/internal/pkg/middleware/logging"
+	"github.com/ashwinyue/onex/internal/pkg/middleware/tracing"
+	"github.com/ashwinyue/onex/internal/pkg/middleware/validate"
+	"github.com/ashwinyue/onex/internal/usercenter/locales"
+	"github.com/ashwinyue/onex/pkg/authn"
+	"github.com/ashwinyue/onex/pkg/i18n"
+	"github.com/ashwinyue/onex/pkg/log"
 )
 
 // ProviderSet defines a wire provider set.

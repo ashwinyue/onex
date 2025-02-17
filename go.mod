@@ -1,4 +1,4 @@
-module github.com/rosas/onex
+module github.com/ashwinyue/onex
 
 go 1.22.0
 

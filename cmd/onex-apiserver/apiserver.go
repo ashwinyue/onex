@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 // APIServer is the main API server and master for the onex.
@@ -22,16 +22,16 @@ import (
 	_ "k8s.io/component-base/metrics/prometheus/version"  // for version metric registration
 	"k8s.io/klog/v2"
 
-	"github.com/rosas/onex/cmd/onex-apiserver/app"
-	"github.com/rosas/onex/internal/apiserver/admission/plugin/minerset"
-	"github.com/rosas/onex/internal/controlplane/admission/initializer"
-	"github.com/rosas/onex/internal/pkg/config/minerprofile"
-	//"github.com/rosas/onex/internal/pkg/options"
-	appsrest "github.com/rosas/onex/internal/apiserver/registry/apps/rest"
-	"github.com/rosas/onex/pkg/apis/apps/v1beta1"
-	"github.com/rosas/onex/pkg/generated/clientset/versioned"
-	"github.com/rosas/onex/pkg/generated/informers"
-	generatedopenapi "github.com/rosas/onex/pkg/generated/openapi"
+	"github.com/ashwinyue/onex/cmd/onex-apiserver/app"
+	"github.com/ashwinyue/onex/internal/apiserver/admission/plugin/minerset"
+	"github.com/ashwinyue/onex/internal/controlplane/admission/initializer"
+	"github.com/ashwinyue/onex/internal/pkg/config/minerprofile"
+	//"github.com/ashwinyue/onex/internal/pkg/options"
+	appsrest "github.com/ashwinyue/onex/internal/apiserver/registry/apps/rest"
+	"github.com/ashwinyue/onex/pkg/apis/apps/v1beta1"
+	"github.com/ashwinyue/onex/pkg/generated/clientset/versioned"
+	"github.com/ashwinyue/onex/pkg/generated/informers"
+	generatedopenapi "github.com/ashwinyue/onex/pkg/generated/openapi"
 )
 
 func main() {

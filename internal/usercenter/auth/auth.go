@@ -1,19 +1,19 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package auth
 
-//go:generate mockgen -self_package github.com/rosas/onex/internal/usercenter/auth -destination mock_auth.go -package auth github.com/rosas/onex/internal/usercenter/auth AuthProvider,AuthzInterface,AuthnInterface
+//go:generate mockgen -self_package github.com/ashwinyue/onex/internal/usercenter/auth -destination mock_auth.go -package auth github.com/ashwinyue/onex/internal/usercenter/auth AuthProvider,AuthzInterface,AuthnInterface
 
 import (
 	"context"
 
 	"github.com/google/wire"
 
-	"github.com/rosas/onex/pkg/authn"
+	"github.com/ashwinyue/onex/pkg/authn"
 )
 
 // ProviderSet is a Wire provider set that creates a new instance of auth.

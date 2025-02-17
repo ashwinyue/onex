@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 // Package options contains flags and options for initializing an apiserver
@@ -12,14 +12,14 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	cliflag "k8s.io/component-base/cli/flag"
 
-	"github.com/rosas/onex/internal/gateway"
-	"github.com/rosas/onex/internal/pkg/client"
-	"github.com/rosas/onex/internal/pkg/client/usercenter"
-	"github.com/rosas/onex/internal/pkg/feature"
-	kubeutil "github.com/rosas/onex/internal/pkg/util/kube"
-	"github.com/rosas/onex/pkg/app"
-	"github.com/rosas/onex/pkg/log"
-	genericoptions "github.com/rosas/onex/pkg/options"
+	"github.com/ashwinyue/onex/internal/gateway"
+	"github.com/ashwinyue/onex/internal/pkg/client"
+	"github.com/ashwinyue/onex/internal/pkg/client/usercenter"
+	"github.com/ashwinyue/onex/internal/pkg/feature"
+	kubeutil "github.com/ashwinyue/onex/internal/pkg/util/kube"
+	"github.com/ashwinyue/onex/pkg/app"
+	"github.com/ashwinyue/onex/pkg/log"
+	genericoptions "github.com/ashwinyue/onex/pkg/options"
 )
 
 const (

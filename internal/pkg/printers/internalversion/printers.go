@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package internalversion
@@ -18,7 +18,7 @@ import (
 	api "k8s.io/kubernetes/pkg/apis/core"
 	"k8s.io/kubernetes/pkg/printers"
 
-	printersutil "github.com/rosas/onex/internal/pkg/util/printers"
+	printersutil "github.com/ashwinyue/onex/internal/pkg/util/printers"
 )
 
 // AddHandlers adds print handlers for default OneX types dealing with internal versions.

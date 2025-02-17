@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 // Package options contains flags and options for initializing an apiserver
@@ -14,9 +14,9 @@ import (
 	cliflag "k8s.io/component-base/cli/flag"
 	"k8s.io/kube-openapi/pkg/common"
 
-	"github.com/rosas/onex/internal/controlplane"
-	controlplaneoptions "github.com/rosas/onex/internal/controlplane/apiserver/options"
-	"github.com/rosas/onex/pkg/apiserver/storage"
+	"github.com/ashwinyue/onex/internal/controlplane"
+	controlplaneoptions "github.com/ashwinyue/onex/internal/controlplane/apiserver/options"
+	"github.com/ashwinyue/onex/pkg/apiserver/storage"
 )
 
 const defaultEtcdPathPrefix = "/registry/onex.io"

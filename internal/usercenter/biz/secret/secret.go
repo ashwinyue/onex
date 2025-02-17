@@ -1,12 +1,12 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package secret
 
-//go:generate mockgen -self_package github.com/rosas/onex/internal/usercenter/biz/secret -destination mock_secret.go -package secret github.com/rosas/onex/internal/usercenter/biz/secret SecretBiz
+//go:generate mockgen -self_package github.com/ashwinyue/onex/internal/usercenter/biz/secret -destination mock_secret.go -package secret github.com/ashwinyue/onex/internal/usercenter/biz/secret SecretBiz
 
 import (
 	"context"
@@ -15,12 +15,12 @@ import (
 
 	"github.com/jinzhu/copier"
 
-	"github.com/rosas/onex/internal/pkg/onexx"
-	"github.com/rosas/onex/internal/usercenter/conversion"
-	"github.com/rosas/onex/internal/usercenter/model"
-	"github.com/rosas/onex/internal/usercenter/store"
-	v1 "github.com/rosas/onex/pkg/api/usercenter/v1"
-	"github.com/rosas/onex/pkg/store/where"
+	"github.com/ashwinyue/onex/internal/pkg/onexx"
+	"github.com/ashwinyue/onex/internal/usercenter/conversion"
+	"github.com/ashwinyue/onex/internal/usercenter/model"
+	"github.com/ashwinyue/onex/internal/usercenter/store"
+	v1 "github.com/ashwinyue/onex/pkg/api/usercenter/v1"
+	"github.com/ashwinyue/onex/pkg/store/where"
 )
 
 // SecretBiz defines the interface for managing secrets.

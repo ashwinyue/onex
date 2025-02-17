@@ -1,8 +1,8 @@
 package initializer
 
 import (
-	"github.com/rosas/onex/pkg/watch/manager"
-	"github.com/rosas/onex/pkg/watch/registry"
+	"github.com/ashwinyue/onex/pkg/watch/manager"
+	"github.com/ashwinyue/onex/pkg/watch/registry"
 )
 
 // WatcherInitializer is used for initialization of shareable resources between watcher plugins.

@@ -6,7 +6,7 @@ onexctl controls the onex cloud platform
 
 onexctl controls the onex cloud platform, is the client side tool for onex cloud platform.
 
- Find more information at: https://github.com/rosas/onex/blob/master/docs/guide/en-US/cmd/onexctl/onexctl.md
+ Find more information at: https://github.com/ashwinyue/onex/blob/master/docs/guide/en-US/cmd/onexctl/onexctl.md
 
 ```
 onexctl [flags]

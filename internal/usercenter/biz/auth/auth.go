@@ -1,25 +1,25 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package auth
 
-//go:generate mockgen -self_package github.com/rosas/onex/internal/usercenter/biz/auth -destination mock_auth.go -package auth github.com/rosas/onex/internal/usercenter/biz/auth AuthBiz
+//go:generate mockgen -self_package github.com/ashwinyue/onex/internal/usercenter/biz/auth -destination mock_auth.go -package auth github.com/ashwinyue/onex/internal/usercenter/biz/auth AuthBiz
 
 import (
 	"context"
 
-	"github.com/rosas/onex/internal/pkg/onexx"
-	"github.com/rosas/onex/internal/usercenter/auth"
-	"github.com/rosas/onex/internal/usercenter/locales"
-	"github.com/rosas/onex/internal/usercenter/store"
-	v1 "github.com/rosas/onex/pkg/api/usercenter/v1"
-	"github.com/rosas/onex/pkg/authn"
-	"github.com/rosas/onex/pkg/i18n"
-	"github.com/rosas/onex/pkg/log"
-	"github.com/rosas/onex/pkg/store/where"
+	"github.com/ashwinyue/onex/internal/pkg/onexx"
+	"github.com/ashwinyue/onex/internal/usercenter/auth"
+	"github.com/ashwinyue/onex/internal/usercenter/locales"
+	"github.com/ashwinyue/onex/internal/usercenter/store"
+	v1 "github.com/ashwinyue/onex/pkg/api/usercenter/v1"
+	"github.com/ashwinyue/onex/pkg/authn"
+	"github.com/ashwinyue/onex/pkg/i18n"
+	"github.com/ashwinyue/onex/pkg/log"
+	"github.com/ashwinyue/onex/pkg/store/where"
 )
 
 // AuthBiz defines functions used for authentication and authorization.

@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package model
@@ -10,9 +10,9 @@ import (
 	"github.com/google/uuid"
 	"gorm.io/gorm"
 
-	known "github.com/rosas/onex/internal/pkg/known/usercenter"
-	"github.com/rosas/onex/internal/pkg/zid"
-	"github.com/rosas/onex/pkg/authn"
+	known "github.com/ashwinyue/onex/internal/pkg/known/usercenter"
+	"github.com/ashwinyue/onex/internal/pkg/zid"
+	"github.com/ashwinyue/onex/pkg/authn"
 )
 
 // BeforeCreate runs before creating a SecretM database record and initializes various fields.

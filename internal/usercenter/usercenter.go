@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package usercenter
@@ -12,12 +12,12 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/jinzhu/copier"
 
-	"github.com/rosas/onex/internal/pkg/bootstrap"
-	"github.com/rosas/onex/internal/usercenter/server"
-	"github.com/rosas/onex/pkg/db"
-	"github.com/rosas/onex/pkg/log"
-	genericoptions "github.com/rosas/onex/pkg/options"
-	"github.com/rosas/onex/pkg/version"
+	"github.com/ashwinyue/onex/internal/pkg/bootstrap"
+	"github.com/ashwinyue/onex/internal/usercenter/server"
+	"github.com/ashwinyue/onex/pkg/db"
+	"github.com/ashwinyue/onex/pkg/log"
+	genericoptions "github.com/ashwinyue/onex/pkg/options"
+	"github.com/ashwinyue/onex/pkg/version"
 )
 
 var (

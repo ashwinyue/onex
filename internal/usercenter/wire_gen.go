@@ -7,17 +7,17 @@
 package usercenter
 
 import (
+	"github.com/ashwinyue/onex/internal/pkg/bootstrap"
+	validation2 "github.com/ashwinyue/onex/internal/pkg/validation"
+	"github.com/ashwinyue/onex/internal/usercenter/auth"
+	"github.com/ashwinyue/onex/internal/usercenter/biz"
+	"github.com/ashwinyue/onex/internal/usercenter/server"
+	"github.com/ashwinyue/onex/internal/usercenter/service"
+	"github.com/ashwinyue/onex/internal/usercenter/store"
+	"github.com/ashwinyue/onex/internal/usercenter/validation"
+	"github.com/ashwinyue/onex/pkg/db"
+	"github.com/ashwinyue/onex/pkg/options"
 	"github.com/go-kratos/kratos/v2"
-	"github.com/rosas/onex/internal/pkg/bootstrap"
-	validation2 "github.com/rosas/onex/internal/pkg/validation"
-	"github.com/rosas/onex/internal/usercenter/auth"
-	"github.com/rosas/onex/internal/usercenter/biz"
-	"github.com/rosas/onex/internal/usercenter/server"
-	"github.com/rosas/onex/internal/usercenter/service"
-	"github.com/rosas/onex/internal/usercenter/store"
-	"github.com/rosas/onex/internal/usercenter/validation"
-	"github.com/rosas/onex/pkg/db"
-	"github.com/rosas/onex/pkg/options"
 )
 
 // Injectors from wire.go:

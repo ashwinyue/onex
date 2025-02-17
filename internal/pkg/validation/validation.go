@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package validation
@@ -14,7 +14,7 @@ import (
 	"github.com/google/wire"
 	"k8s.io/klog/v2"
 
-	"github.com/rosas/onex/internal/pkg/middleware/validate"
+	"github.com/ashwinyue/onex/internal/pkg/middleware/validate"
 )
 
 // Validator implements the validate.IValidator interface.

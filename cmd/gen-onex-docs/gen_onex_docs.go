@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package main
@@ -13,17 +13,17 @@ import (
 	"github.com/spf13/cobra/doc"
 	"k8s.io/kubernetes/cmd/genutils"
 
-	apiservapp "github.com/rosas/onex/cmd/onex-apiserver/app"
-	ctrlmgrapp "github.com/rosas/onex/cmd/onex-controller-manager/app"
-	fakeserverapp "github.com/rosas/onex/cmd/onex-fakeserver/app"
-	gwapp "github.com/rosas/onex/cmd/onex-gateway/app"
-	minerctrlapp "github.com/rosas/onex/cmd/onex-miner-controller/app"
-	minersetctrlapp "github.com/rosas/onex/cmd/onex-minerset-controller/app"
-	watchapp "github.com/rosas/onex/cmd/onex-nightwatch/app"
-	pumpapp "github.com/rosas/onex/cmd/onex-pump/app"
-	toyblcapp "github.com/rosas/onex/cmd/onex-toyblc/app"
-	usercenterapp "github.com/rosas/onex/cmd/onex-usercenter/app"
-	onexctlcmd "github.com/rosas/onex/internal/onexctl/cmd"
+	apiservapp "github.com/ashwinyue/onex/cmd/onex-apiserver/app"
+	ctrlmgrapp "github.com/ashwinyue/onex/cmd/onex-controller-manager/app"
+	fakeserverapp "github.com/ashwinyue/onex/cmd/onex-fakeserver/app"
+	gwapp "github.com/ashwinyue/onex/cmd/onex-gateway/app"
+	minerctrlapp "github.com/ashwinyue/onex/cmd/onex-miner-controller/app"
+	minersetctrlapp "github.com/ashwinyue/onex/cmd/onex-minerset-controller/app"
+	watchapp "github.com/ashwinyue/onex/cmd/onex-nightwatch/app"
+	pumpapp "github.com/ashwinyue/onex/cmd/onex-pump/app"
+	toyblcapp "github.com/ashwinyue/onex/cmd/onex-toyblc/app"
+	usercenterapp "github.com/ashwinyue/onex/cmd/onex-usercenter/app"
+	onexctlcmd "github.com/ashwinyue/onex/internal/onexctl/cmd"
 )
 
 func main() {

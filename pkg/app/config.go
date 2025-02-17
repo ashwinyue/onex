@@ -11,7 +11,7 @@ import (
 	"github.com/spf13/viper"
 	"k8s.io/client-go/util/homedir"
 
-	"github.com/rosas/onex/pkg/log"
+	"github.com/ashwinyue/onex/pkg/log"
 )
 
 const configFlagName = "config"

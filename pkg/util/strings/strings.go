@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/onexstack/onex.
 //
 
 package strings
@@ -118,6 +118,15 @@ func Filter(list []string, strToFilter string) (newList []string) {
 	}
 
 	return
+}
+
+func Add(list []string, str string) []string {
+	for _, item := range list {
+		if item == str {
+			return list
+		}
+	}
+	return append(list, str)
 }
 
 // Contains returns true if a list contains a string.

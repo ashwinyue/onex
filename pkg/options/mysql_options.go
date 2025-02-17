@@ -1,27 +1,28 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/onexstack/onex.
 //
 
 package options
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/spf13/pflag"
 	"gorm.io/gorm"
 	gormlogger "gorm.io/gorm/logger"
 
-	"github.com/rosas/onex/pkg/db"
-	"github.com/rosas/onex/pkg/log"
+	"github.com/ashwinyue/onex/pkg/db"
+	"github.com/ashwinyue/onex/pkg/log"
 )
 
 var _ IOptions = (*MySQLOptions)(nil)
 
 // MySQLOptions defines options for mysql database.
 type MySQLOptions struct {
-	Addr                  string        `json:"host,omitempty" mapstructure:"host"`
+	Addr                  string        `json:"addr,omitempty" mapstructure:"addr"`
 	Username              string        `json:"username,omitempty" mapstructure:"username"`
 	Password              string        `json:"-" mapstructure:"password"`
 	Database              string        `json:"database" mapstructure:"database"`
@@ -69,6 +70,17 @@ func (o *MySQLOptions) AddFlags(fs *pflag.FlagSet, prefixes ...string) {
 		"Maximum connection life time allowed to connect to mysql.")
 	fs.IntVar(&o.LogLevel, join(prefixes...)+"mysql.log-mode", o.LogLevel, ""+
 		"Specify gorm log level.")
+}
+
+// DSN return DSN from MySQLOptions.
+func (o *MySQLOptions) DSN() string {
+	return fmt.Sprintf(`%s:%s@tcp(%s)/%s?charset=utf8&parseTime=%t&loc=%s`,
+		o.Username,
+		o.Password,
+		o.Addr,
+		o.Database,
+		true,
+		"Local")
 }
 
 // NewDB create mysql store with the given config.

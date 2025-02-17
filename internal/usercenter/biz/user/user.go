@@ -1,12 +1,12 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package user
 
-//go:generate mockgen -self_package github.com/rosas/onex/internal/usercenter/biz/user -destination mock_user.go -package user github.com/rosas/onex/internal/usercenter/biz/user UserBiz
+//go:generate mockgen -self_package github.com/ashwinyue/onex/internal/usercenter/biz/user -destination mock_user.go -package user github.com/ashwinyue/onex/internal/usercenter/biz/user UserBiz
 
 import (
 	"context"
@@ -19,15 +19,15 @@ import (
 	"google.golang.org/protobuf/types/known/timestamppb"
 	"gorm.io/gorm"
 
-	"github.com/rosas/onex/internal/pkg/onexx"
-	validationutil "github.com/rosas/onex/internal/pkg/util/validation"
-	"github.com/rosas/onex/internal/usercenter/conversion"
-	"github.com/rosas/onex/internal/usercenter/model"
-	"github.com/rosas/onex/internal/usercenter/store"
-	v1 "github.com/rosas/onex/pkg/api/usercenter/v1"
-	"github.com/rosas/onex/pkg/authn"
-	"github.com/rosas/onex/pkg/log"
-	"github.com/rosas/onex/pkg/store/where"
+	"github.com/ashwinyue/onex/internal/pkg/onexx"
+	validationutil "github.com/ashwinyue/onex/internal/pkg/util/validation"
+	"github.com/ashwinyue/onex/internal/usercenter/conversion"
+	"github.com/ashwinyue/onex/internal/usercenter/model"
+	"github.com/ashwinyue/onex/internal/usercenter/store"
+	v1 "github.com/ashwinyue/onex/pkg/api/usercenter/v1"
+	"github.com/ashwinyue/onex/pkg/authn"
+	"github.com/ashwinyue/onex/pkg/log"
+	"github.com/ashwinyue/onex/pkg/store/where"
 )
 
 const (

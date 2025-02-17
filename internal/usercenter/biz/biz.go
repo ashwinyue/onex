@@ -1,22 +1,22 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package biz
 
-//go:generate mockgen -self_package github.com/rosas/onex/internal/usercenter/biz -destination mock_biz.go -package biz github.com/rosas/onex/internal/usercenter/biz IBiz
+//go:generate mockgen -self_package github.com/ashwinyue/onex/internal/usercenter/biz -destination mock_biz.go -package biz github.com/ashwinyue/onex/internal/usercenter/biz IBiz
 
 import (
 	"github.com/google/wire"
 
-	"github.com/rosas/onex/internal/usercenter/auth"
-	authbiz "github.com/rosas/onex/internal/usercenter/biz/auth"
-	"github.com/rosas/onex/internal/usercenter/biz/secret"
-	"github.com/rosas/onex/internal/usercenter/biz/user"
-	"github.com/rosas/onex/internal/usercenter/store"
-	"github.com/rosas/onex/pkg/authn"
+	"github.com/ashwinyue/onex/internal/usercenter/auth"
+	authbiz "github.com/ashwinyue/onex/internal/usercenter/biz/auth"
+	"github.com/ashwinyue/onex/internal/usercenter/biz/secret"
+	"github.com/ashwinyue/onex/internal/usercenter/biz/user"
+	"github.com/ashwinyue/onex/internal/usercenter/store"
+	"github.com/ashwinyue/onex/pkg/authn"
 )
 
 // ProviderSet contains providers for creating instances of the biz struct.

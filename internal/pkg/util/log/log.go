@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 // Package log provides log utils.
@@ -19,7 +19,7 @@ import (
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/rosas/onex/pkg/apis/apps/v1beta1"
+	"github.com/ashwinyue/onex/pkg/apis/apps/v1beta1"
 )
 
 // AddOwners adds the owners of an Object based on OwnerReferences as k/v pairs to the logger in ctx.

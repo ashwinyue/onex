@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package app
@@ -9,16 +9,16 @@ package app
 import (
 	genericapiserver "k8s.io/apiserver/pkg/server"
 
-	"github.com/rosas/onex/cmd/onex-cacheserver/app/options"
-	"github.com/rosas/onex/internal/cacheserver"
-	"github.com/rosas/onex/pkg/app"
+	"github.com/ashwinyue/onex/cmd/onex-cacheserver/app/options"
+	"github.com/ashwinyue/onex/internal/cacheserver"
+	"github.com/ashwinyue/onex/pkg/app"
 )
 
 const commandDesc = `onex-cacheserver is an example cache server, demonstrating 
 how to develop a caching service.
 
 Find more onex-cacheserver information at:
-    https://github.com/rosas/onex/blob/master/docs/guide/en-US/cmd/onex-cacheserver.md`
+    https://github.com/ashwinyue/onex/blob/master/docs/guide/en-US/cmd/onex-cacheserver.md`
 
 // NewApp creates an App object with default parameters.
 func NewApp() *app.App {

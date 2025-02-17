@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/rosas/onex/internal/fakeserver/model"
-	"github.com/rosas/onex/internal/fakeserver/store"
-	"github.com/rosas/onex/internal/fakeserver/store/mysql"
-	"github.com/rosas/onex/pkg/db"
-	"github.com/rosas/onex/pkg/store/where"
+	"github.com/ashwinyue/onex/internal/fakeserver/model"
+	"github.com/ashwinyue/onex/internal/fakeserver/store"
+	"github.com/ashwinyue/onex/internal/fakeserver/store/mysql"
+	"github.com/ashwinyue/onex/pkg/db"
+	"github.com/ashwinyue/onex/pkg/store/where"
 )
 
 func main() {

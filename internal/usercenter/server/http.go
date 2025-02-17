@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package server
@@ -16,10 +16,10 @@ import (
 	"github.com/gorilla/handlers"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/rosas/onex/internal/pkg/pprof"
-	"github.com/rosas/onex/internal/usercenter/service"
-	v1 "github.com/rosas/onex/pkg/api/usercenter/v1"
-	"github.com/rosas/onex/pkg/authn"
+	"github.com/ashwinyue/onex/internal/pkg/pprof"
+	"github.com/ashwinyue/onex/internal/usercenter/service"
+	v1 "github.com/ashwinyue/onex/pkg/api/usercenter/v1"
+	"github.com/ashwinyue/onex/pkg/authn"
 )
 
 func NewWhiteListMatcher() selector.MatchFunc {

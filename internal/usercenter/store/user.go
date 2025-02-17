@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package store
@@ -9,10 +9,10 @@ package store
 import (
 	"context"
 
-	"github.com/rosas/onex/internal/usercenter/model"
-	genericstore "github.com/rosas/onex/pkg/store"
-	"github.com/rosas/onex/pkg/store/logger/onex"
-	"github.com/rosas/onex/pkg/store/where"
+	"github.com/ashwinyue/onex/internal/usercenter/model"
+	genericstore "github.com/ashwinyue/onex/pkg/store"
+	"github.com/ashwinyue/onex/pkg/store/logger/onex"
+	"github.com/ashwinyue/onex/pkg/store/where"
 )
 
 // UserStore defines the interface for managing users in the database.

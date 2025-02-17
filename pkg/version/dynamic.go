@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	utilversion "github.com/rosas/onex/pkg/util/version"
+	utilversion "github.com/ashwinyue/onex/pkg/util/version"
 )
 
 var dynamicGitVersion atomic.Value

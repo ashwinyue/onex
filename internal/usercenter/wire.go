@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 //go:build wireinject
@@ -17,16 +17,16 @@ import (
 	"github.com/go-kratos/kratos/v2"
 	"github.com/google/wire"
 
-	"github.com/rosas/onex/internal/pkg/bootstrap"
-	"github.com/rosas/onex/internal/pkg/validation"
-	"github.com/rosas/onex/internal/usercenter/auth"
-	"github.com/rosas/onex/internal/usercenter/biz"
-	"github.com/rosas/onex/internal/usercenter/server"
-	"github.com/rosas/onex/internal/usercenter/service"
-	"github.com/rosas/onex/internal/usercenter/store"
-	customvalidation "github.com/rosas/onex/internal/usercenter/validation"
-	"github.com/rosas/onex/pkg/db"
-	genericoptions "github.com/rosas/onex/pkg/options"
+	"github.com/ashwinyue/onex/internal/pkg/bootstrap"
+	"github.com/ashwinyue/onex/internal/pkg/validation"
+	"github.com/ashwinyue/onex/internal/usercenter/auth"
+	"github.com/ashwinyue/onex/internal/usercenter/biz"
+	"github.com/ashwinyue/onex/internal/usercenter/server"
+	"github.com/ashwinyue/onex/internal/usercenter/service"
+	"github.com/ashwinyue/onex/internal/usercenter/store"
+	customvalidation "github.com/ashwinyue/onex/internal/usercenter/validation"
+	"github.com/ashwinyue/onex/pkg/db"
+	genericoptions "github.com/ashwinyue/onex/pkg/options"
 )
 
 // wireApp builds and returns a Kratos app with the given options.

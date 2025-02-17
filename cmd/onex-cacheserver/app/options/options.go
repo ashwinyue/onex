@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 // Package options contains flags and options for initializing an apiserver
@@ -11,10 +11,10 @@ import (
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	cliflag "k8s.io/component-base/cli/flag"
 
-	"github.com/rosas/onex/internal/cacheserver"
-	"github.com/rosas/onex/pkg/app"
-	"github.com/rosas/onex/pkg/log"
-	genericoptions "github.com/rosas/onex/pkg/options"
+	"github.com/ashwinyue/onex/internal/cacheserver"
+	"github.com/ashwinyue/onex/pkg/app"
+	"github.com/ashwinyue/onex/pkg/log"
+	genericoptions "github.com/ashwinyue/onex/pkg/options"
 )
 
 const (

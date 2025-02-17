@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/onexstack/onex.
 //
 
 package options
@@ -61,7 +61,7 @@ func (o *TLSOptions) AddFlags(fs *pflag.FlagSet, prefixes ...string) {
 func (o *TLSOptions) MustTLSConfig() *tls.Config {
 	tlsConf, err := o.TLSConfig()
 	if err != nil {
-		panic(err)
+		return &tls.Config{}
 	}
 
 	return tlsConf
@@ -110,4 +110,12 @@ func (o *TLSOptions) TLSConfig() (*tls.Config, error) {
 	}
 
 	return tlsConfig, nil
+}
+
+// Scheme returns the URL scheme based on the TLS configuration.
+func (o *TLSOptions) Scheme() string {
+	if o.UseTLS {
+		return "https"
+	}
+	return "http"
 }

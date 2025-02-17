@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package service
@@ -13,8 +13,8 @@ import (
 
 	"github.com/go-kratos/kratos/v2/errors"
 
-	v1 "github.com/rosas/onex/pkg/api/usercenter/v1"
-	"github.com/rosas/onex/pkg/api/zerrors"
+	v1 "github.com/ashwinyue/onex/pkg/api/usercenter/v1"
+	"github.com/ashwinyue/onex/pkg/api/zerrors"
 )
 
 // Login authenticates the user credentials and returns a token on success.

@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package usercenter
@@ -9,10 +9,10 @@ package usercenter
 import (
 	"github.com/golang-jwt/jwt/v4"
 
-	"github.com/rosas/onex/pkg/authn"
-	jwtauthn "github.com/rosas/onex/pkg/authn/jwt"
-	"github.com/rosas/onex/pkg/authn/jwt/store/redis"
-	genericoptions "github.com/rosas/onex/pkg/options"
+	"github.com/ashwinyue/onex/pkg/authn"
+	jwtauthn "github.com/ashwinyue/onex/pkg/authn/jwt"
+	"github.com/ashwinyue/onex/pkg/authn/jwt/store/redis"
+	genericoptions "github.com/ashwinyue/onex/pkg/options"
 )
 
 // NewAuthenticator creates a new JWT-based Authenticator using the provided JWT and Redis options.

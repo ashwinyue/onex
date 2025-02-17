@@ -1,7 +1,7 @@
 // Copyright 2022 Lingfei Kong <colin404@foxmail.com>. All rights reserved.
 // Use of this source code is governed by a MIT style
 // license that can be found in the LICENSE file. The original repo for
-// this file is https://github.com/rosas/onex.
+// this file is https://github.com/ashwinyue/onex.
 //
 
 package store
@@ -11,13 +11,13 @@ import (
 
 	"github.com/google/wire"
 
-	known "github.com/rosas/onex/internal/pkg/known/usercenter"
-	"github.com/rosas/onex/internal/usercenter/auth"
-	"github.com/rosas/onex/internal/usercenter/model"
+	known "github.com/ashwinyue/onex/internal/pkg/known/usercenter"
+	"github.com/ashwinyue/onex/internal/usercenter/auth"
+	"github.com/ashwinyue/onex/internal/usercenter/model"
 )
 
 // secretSetter is an implementation of the
-// `github.com/rosas/onex/internal/usercenter/auth.TemporarySecretSetter` interface. It used to set
+// `github.com/ashwinyue/onex/internal/usercenter/auth.TemporarySecretSetter` interface. It used to set
 // a temporary key for a user. Each user has only one temporary key.
 type secretSetter struct {
 	ds *datastore

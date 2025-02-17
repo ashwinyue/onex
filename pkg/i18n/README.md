@@ -8,7 +8,7 @@ i18n of different languages based [go-i18n](https://github.com/nicksnyder/go-i18
 
 
 ```bash
-go get -u github.com/rosas/onex/pkg/i18n
+go get -u github.com/ashwinyue/onex/pkg/i18n
 ```
 
 add language files
@@ -30,7 +30,7 @@ import (
 	"embed"
 	"fmt"
 	"golang.org/x/text/language"
-  "github.com/rosas/onex/pkg/i18n"
+  "github.com/ashwinyue/onex/pkg/i18n"
 )
 
 //go:embed locales

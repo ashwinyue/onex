@@ -65,7 +65,7 @@ EOF
 前置操作：                                    
 
 ``bash
-$ export ONEX_ROOT=$GOPATH/src/github.com/rosas/onex
+$ export ONEX_ROOT=$GOPATH/src/github.com/ashwinyue/onex
 $ cd ${ONEX_ROOT}
 `
 
