@@ -10,6 +10,7 @@ package store
 
 import (
 	"context"
+	"github.com/ashwinyue/onex/pkg/store/where"
 	"sync"
 
 	"github.com/google/wire"
@@ -33,7 +34,7 @@ type transactionKey struct{}
 // IStore is an interface that represents methods
 // required to be implemented by a Store implementation.
 type IStore interface {
-	DB(ctx context.Context) *gorm.DB
+	DB(ctx context.Context, wheres ...where.Where) *gorm.DB
 	TX(context.Context, func(ctx context.Context) error) error
 	Users() UserStore
 	Secrets() SecretStore
@@ -65,7 +66,7 @@ func NewStore(db *gorm.DB) *datastore {
 }
 
 // DB retrieves the current database instance from the context or returns the main instance.
-func (ds *datastore) DB(ctx context.Context) *gorm.DB {
+func (ds *datastore) DB(ctx context.Context, wheres ...where.Where) *gorm.DB {
 	tx, ok := ctx.Value(transactionKey{}).(*gorm.DB)
 	if ok {
 		return tx

@@ -1,6 +1,7 @@
 package onex
 
 import (
+	"context"
 	"github.com/ashwinyue/onex/pkg/log"
 )
 
@@ -14,6 +15,6 @@ func NewLogger() *onexLogger {
 }
 
 // Error logs an error message with the provided context using the log package.
-func (l *onexLogger) Error(err error, msg string, kvs ...any) {
+func (l *onexLogger) Error(context context.Context, err error, msg string, kvs ...any) {
 	log.Errorw(err, msg, kvs...)
 }
