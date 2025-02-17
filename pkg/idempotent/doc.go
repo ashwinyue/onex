@@ -4,15 +4,4 @@
 // this file is https://github.com/ashwinyue/onex.
 //
 
-// gateway is the backend portal of onex.
-package main
-
-import (
-	_ "go.uber.org/automaxprocs/maxprocs"
-
-	"github.com/ashwinyue/onex/cmd/onex-gateway/app"
-)
-
-func main() {
-	app.NewApp().Run()
-}
+package idempotent // import "github.com/ashwinyue/onex/pkg/idempotent"
