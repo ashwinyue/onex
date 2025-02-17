@@ -50,7 +50,7 @@ func NewMiddlewares(logger krtlog.Logger, a authn.Authenticator, v validate.IVal
 		recovery.Recovery(
 			recovery.WithHandler(func(ctx context.Context, rq, err any) error {
 				data, _ := json.Marshal(rq)
-				log.C(ctx).Errorw(err.(error), "Catching a panic", "rq", string(data))
+				log.W(ctx).Errorw(err.(error), "Catching a panic", "rq", string(data))
 				return nil
 			}),
 		),

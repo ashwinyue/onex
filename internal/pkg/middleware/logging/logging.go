@@ -41,7 +41,7 @@ func Server(logger krtlog.Logger) middleware.Middleware {
 				reason = se.Reason
 			}
 			level, stack := extractError(err)
-			_ = log.C(ctx).Log(level,
+			_ = log.W(ctx).Log(level,
 				"kind", "server",
 				"component", kind,
 				"operation", operation,
@@ -77,7 +77,7 @@ func Client(logger krtlog.Logger) middleware.Middleware {
 				reason = se.Reason
 			}
 			level, stack := extractError(err)
-			_ = log.C(ctx).Log(level,
+			_ = log.W(ctx).Log(level,
 				"kind", "client",
 				"component", kind,
 				"operation", operation,

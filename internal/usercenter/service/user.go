@@ -17,7 +17,7 @@ import (
 
 // CreateUser receives a CreateUserRequest and creates a new user record in the datastore.
 func (s *UserCenterService) CreateUser(ctx context.Context, rq *v1.CreateUserRequest) (*v1.UserReply, error) {
-	log.C(ctx).Infow("CreateUser function called", "username", rq.Username)
+	log.W(ctx).Infow("CreateUser function called", "username", rq.Username)
 	return s.biz.Users().Create(ctx, rq)
 }
 

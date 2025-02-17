@@ -59,7 +59,7 @@ func (b *authBiz) Login(ctx context.Context, rq *v1.LoginRequest) (*v1.LoginRepl
 	// Retrieve user information from the data storage by username.
 	userM, err := b.ds.Users().Get(ctx, where.F("username", rq.Username))
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to retrieve user by username")
+		log.W(ctx).Errorw(err, "Failed to retrieve user by username")
 		return nil, i18n.FromContext(ctx).E(locales.RecordNotFound)
 	}
 
@@ -70,7 +70,7 @@ func (b *authBiz) Login(ctx context.Context, rq *v1.LoginRequest) (*v1.LoginRepl
 	// same method, and then comparing the encrypted string with the
 	// one stored in the database. If they match, the password is verified.
 	if err := authn.Compare(userM.Password, rq.Password); err != nil {
-		log.C(ctx).Errorw(err, "Password does not match")
+		log.W(ctx).Errorw(err, "Password does not match")
 		return nil, i18n.FromContext(ctx).E(locales.IncorrectPassword)
 	}
 
@@ -78,14 +78,14 @@ func (b *authBiz) Login(ctx context.Context, rq *v1.LoginRequest) (*v1.LoginRepl
 	// Call `b.authn.Sign` to generate a refresh token.
 	refreshToken, err := b.authn.Sign(ctx, userM.UserID)
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to generate refresh token")
+		log.W(ctx).Errorw(err, "Failed to generate refresh token")
 		return nil, i18n.FromContext(ctx).E(locales.JWTTokenSignFail)
 	}
 
 	// Generate an access token for resource access.
 	accessToken, err := b.auth.Sign(ctx, userM.UserID)
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to generate access token")
+		log.W(ctx).Errorw(err, "Failed to generate access token")
 		return nil, i18n.FromContext(ctx).E(locales.JWTTokenSignFail)
 	}
 
@@ -101,7 +101,7 @@ func (b *authBiz) Login(ctx context.Context, rq *v1.LoginRequest) (*v1.LoginRepl
 // Logout invalidates a token.
 func (b *authBiz) Logout(ctx context.Context, rq *v1.LogoutRequest) error {
 	if err := b.authn.Destroy(ctx, onexx.FromAccessToken(ctx)); err != nil {
-		log.C(ctx).Errorw(err, "Failed to remove token from cache")
+		log.W(ctx).Errorw(err, "Failed to remove token from cache")
 		return err
 	}
 
@@ -116,13 +116,13 @@ func (b *authBiz) RefreshToken(ctx context.Context, rq *v1.RefreshTokenRequest) 
 	userID := onexx.FromUserID(ctx)
 	refreshToken, err := b.authn.Sign(ctx, userID)
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to generate refresh token")
+		log.W(ctx).Errorw(err, "Failed to generate refresh token")
 		return nil, i18n.FromContext(ctx).E(locales.JWTTokenSignFail)
 	}
 
 	accessToken, err := b.auth.Sign(ctx, userID)
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to generate access token")
+		log.W(ctx).Errorw(err, "Failed to generate access token")
 		return nil, i18n.FromContext(ctx).E(locales.JWTTokenSignFail)
 	}
 
@@ -138,7 +138,7 @@ func (b *authBiz) RefreshToken(ctx context.Context, rq *v1.RefreshTokenRequest) 
 func (b *authBiz) Authenticate(ctx context.Context, accessToken string) (*v1.AuthenticateResponse, error) {
 	userID, err := b.auth.Verify(accessToken)
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to verify access token")
+		log.W(ctx).Errorw(err, "Failed to verify access token")
 		return nil, err
 	}
 
@@ -149,7 +149,7 @@ func (b *authBiz) Authenticate(ctx context.Context, accessToken string) (*v1.Aut
 func (b *authBiz) Authorize(ctx context.Context, sub, obj, act string) (*v1.AuthorizeResponse, error) {
 	allowed, err := b.auth.Authorize(sub, obj, act)
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to authorize")
+		log.W(ctx).Errorw(err, "Failed to authorize")
 		return nil, err
 	}
 	return &v1.AuthorizeResponse{Allowed: allowed}, nil

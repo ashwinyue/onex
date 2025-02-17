@@ -192,7 +192,7 @@ func (b *userBiz) List(ctx context.Context, rq *v1.ListUserRequest) (*v1.ListUse
 	// Retrieve the total count and list of users from the data store.
 	count, userList, err := b.ds.Users().List(ctx, where.P(int(rq.Offset), int(rq.Limit)))
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to list users from storage")
+		log.W(ctx).Errorw(err, "Failed to list users from storage")
 		return nil, err // Return any error encountered.
 	}
 
@@ -208,7 +208,7 @@ func (b *userBiz) List(ctx context.Context, rq *v1.ListUserRequest) (*v1.ListUse
 				// Retrieve the count of secrets for each user.
 				count, _, err := b.ds.Secrets().List(ctx, where.F("user_id", user.UserID))
 				if err != nil {
-					log.C(ctx).Errorw(err, "Failed to list secrets")
+					log.W(ctx).Errorw(err, "Failed to list secrets")
 					return err // Return any error encountered.
 				}
 
@@ -223,7 +223,7 @@ func (b *userBiz) List(ctx context.Context, rq *v1.ListUserRequest) (*v1.ListUse
 
 	// Wait for all goroutines to finish.
 	if err := eg.Wait(); err != nil {
-		log.C(ctx).Errorw(err, "Failed to wait for all function calls to return")
+		log.W(ctx).Errorw(err, "Failed to wait for all function calls to return")
 		return nil, err // Return any error encountered.
 	}
 
@@ -234,7 +234,7 @@ func (b *userBiz) List(ctx context.Context, rq *v1.ListUserRequest) (*v1.ListUse
 		users = append(users, user.(*v1.UserReply)) // Append the user to the final list.
 	}
 
-	log.C(ctx).Debugw("Get users from backend storage", "count", len(users))
+	log.W(ctx).Debugw("Get users from backend storage", "count", len(users))
 
 	return &v1.ListUserResponse{TotalCount: count, Users: users}, nil // Return the response with all retrieved users.
 }
@@ -244,7 +244,7 @@ func (b *userBiz) ListWithBadPerformance(ctx context.Context, rq *v1.ListUserReq
 	// Retrieve the total count and list of users from the data store.
 	count, userList, err := b.ds.Users().List(ctx, where.P(int(rq.Offset), int(rq.Limit)))
 	if err != nil {
-		log.C(ctx).Errorw(err, "Failed to list users from storage")
+		log.W(ctx).Errorw(err, "Failed to list users from storage")
 		return nil, err // Return any error encountered.
 	}
 
@@ -256,7 +256,7 @@ func (b *userBiz) ListWithBadPerformance(ctx context.Context, rq *v1.ListUserReq
 		// Retrieve the count of secrets for each user.
 		count, _, err := b.ds.Secrets().List(ctx, where.F("user_id", item.UserID))
 		if err != nil {
-			log.C(ctx).Errorw(err, "Failed to list secrets")
+			log.W(ctx).Errorw(err, "Failed to list secrets")
 			return nil, err // Return any error encountered.
 		}
 
@@ -268,7 +268,7 @@ func (b *userBiz) ListWithBadPerformance(ctx context.Context, rq *v1.ListUserReq
 		users = append(users, &u) // Append the user to the final response list.
 	}
 
-	log.C(ctx).Debugw("Get users from backend storage", "count", len(users))
+	log.W(ctx).Debugw("Get users from backend storage", "count", len(users))
 
 	return &v1.ListUserResponse{TotalCount: count, Users: users}, nil // Return the response with all retrieved users.
 }
